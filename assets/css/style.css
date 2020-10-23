@@ -73,7 +73,8 @@ body {
   width: 100%;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 3; }
   .header .container {
     height: 100%;
     display: -webkit-box;
@@ -84,7 +85,9 @@ body {
             align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    max-width: 100%;
+    padding: 0 4.3%; }
   .header__left {
     display: -webkit-box;
     display: -ms-flexbox;
