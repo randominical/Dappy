@@ -12,38 +12,48 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
+$maxWidth: 1440;
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
-
 button, a {
     cursor: pointer;
 }
-
 html {
     height: 100%;
     scroll-behavior: smooth;
 }
-
 body {
     height: 100%;
     background: rgba(255, 255, 255, 1);
 }
-
 .wrapper {
     min-height: 100%;
-    max-width: 1440px;
+    max-width: $maxWidth;
     min-width: 280px;
     margin: 0 auto;
     overflow: hidden;
 }
-
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+}
 .container {
     max-width: 1150px;
     padding: 0 20px;
     margin: 0 auto;
 }
-
 .icon {
     font-family: 'Icon Font';
     color: rgba(31,36,49,1);
@@ -53,24 +63,35 @@ body {
         color: rgba(49,94,251,1);
     }
 }
+.text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(130, 137, 155, 1);
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 280; //320 - наименьшее разрешение
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth}));
+}
 //==================================================================================
 .header {
     height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     .container {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    // .header__left
-
     &__left {
         display: flex;
         align-items: center;
     }
-
-    // .header__logo
-
     &__logo {
         flex: 0 0 120.71px;
         margin: 0 35px 0 0;
@@ -80,24 +101,12 @@ body {
             height: auto;
         }
     }
-
-    // .header__menu
-
     &__menu {
     }
-
-    // .header__burger
-
     &__burger {
     }
-
-    // .header__right
-
     &__right {
     }
-
-    // .header__iconbar
-
     &__iconbar {
         display: flex;
         align-items: center;
@@ -108,22 +117,13 @@ body {
     }
 }
 .menu-header {
-
-    // .menu__body
-
     &__body {
     }
-
-    // .menu__list
-
     &__list {
         display: flex;
         align-items: center;
         padding: 0;
     }
-
-    // .menu__link
-
     &__link {
         font-size: 16px;
         line-height: 20px;
@@ -132,6 +132,72 @@ body {
         transition: color .3s ease-in 0s;
         &:hover {
             color: rgba(49,94,251,1);
+        }
+    }
+}
+//==================================================================================
+.top {
+    height: 100vh;
+    .container {
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 8.3%;
+    }
+    // .top__content
+
+    &__content {
+        flex: 0 1 46.5%;
+    }
+
+    // .top__title
+
+    &__title {
+        @include adaptiv-font(36, 16); //в скобках размеры шрифта для крайних разрешений
+        font-weight: bold;
+        line-height: 130%;
+        color: rgba(31, 36, 49, 1);
+        margin: 0 0 22px 0;
+    }
+
+    // .top__text
+
+    &__text {
+        max-width: 251px;
+        margin: 0 0 25px 0;
+    }
+
+    // .top__link
+
+    &__link {
+        height: 40px;
+        width: 215px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 1);
+        background: rgba(49, 94, 251, 1);
+        border-radius: 51px;
+        transition: background .3s ease-in 0s;
+        &:hover {
+            background: rgba(40,188,0,1);
+        }
+    }
+
+    // .top__pic
+
+    &__pic {
+        flex: 0 1 53.5%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 }
