@@ -1,3 +1,6 @@
-
+@import url("../css/normalize_null.css");
+@font-face {
+  font-family: 'Icon Font';
+  src: url("icomoon.woff") format("woff"), url("icomoon.svg") format("svg"), url("icomoon.eot") format("eot"), url("icomoon.ttf") format("ttf"); }
 
 /*# sourceMappingURL=style.css.map */
