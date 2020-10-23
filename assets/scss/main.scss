@@ -1,7 +1,9 @@
 @font-face {
 	font-family: 'Icon Font';
-	src: url("../font/icomoon.woff") format("woff"), url("../font/icomoon.svg") format("svg"), url("../font/icomoon.eot") format("eot"), url("../font/icomoon.ttf") format("ttf");
+	src: url("../font/icon_font/icomoon.woff") format("woff"), url("../font/icon_font/icomoon.svg") format("svg"), url("../font/icon_font/icomoon.eot") format("eot"), url("../font/icon_font/icomoon.ttf") format("ttf");
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 @import url('../css/normalize_null.css');
 
@@ -44,23 +46,92 @@ body {
 
 .icon {
     font-family: 'Icon Font';
-    color: black;
-    font-size: 30px;
+    color: rgba(31,36,49,1);
+    font-size: 24px;
+    transition: color .3s ease-in 0s;
+    &:hover {
+        color: rgba(49,94,251,1);
+    }
 }
-/*
-.icon-tw:before {
-    content: "\e904";
-  }
+//==================================================================================
+.header {
+    height: 100px;
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    // .header__left
 
-  .icon-bi:before {
-    content: "\20";
-  }
-  .icon-face:before {
-    content: "\face";
-  }
-  .icon-cat:before {
-    content: "\ca";
-  }
-  .icon-p:before {
-    content: "\e903";
-  }*/
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    // .header__logo
+
+    &__logo {
+        flex: 0 0 120.71px;
+        margin: 0 35px 0 0;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+    }
+
+    // .header__burger
+
+    &__burger {
+    }
+
+    // .header__right
+
+    &__right {
+    }
+
+    // .header__iconbar
+
+    &__iconbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__icon {
+        margin: 0 10px 0 0;
+    }
+}
+.menu-header {
+
+    // .menu__body
+
+    &__body {
+    }
+
+    // .menu__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    // .menu__link
+
+    &__link {
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(31, 36, 49, 1);
+        margin: 0 35px 0 0;
+        transition: color .3s ease-in 0s;
+        &:hover {
+            color: rgba(49,94,251,1);
+        }
+    }
+}

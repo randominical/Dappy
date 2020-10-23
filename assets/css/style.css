@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 @import url("../css/normalize_null.css");
 @font-face {
   font-family: 'Icon Font';
-  src: url("../font/icomoon.woff") format("woff"), url("../font/icomoon.svg") format("svg"), url("../font/icomoon.eot") format("eot"), url("../font/icomoon.ttf") format("ttf"); }
+  src: url("../font/icon_font/icomoon.woff") format("woff"), url("../font/icon_font/icomoon.svg") format("svg"), url("../font/icon_font/icomoon.eot") format("eot"), url("../font/icon_font/icomoon.ttf") format("ttf"); }
 * {
   font-family: 'Montserrat', sans-serif; }
 
@@ -30,25 +31,71 @@ body {
 
 .icon {
   font-family: 'Icon Font';
-  color: black;
-  font-size: 30px; }
+  color: #1f2431;
+  font-size: 24px;
+  -webkit-transition: color .3s ease-in 0s;
+  transition: color .3s ease-in 0s; }
+  .icon:hover {
+    color: #315efb; }
 
-/*
-.icon-tw:before {
-    content: "\e904";
-  }
+.header {
+  height: 100px; }
+  .header .container {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .header__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 120.71px;
+            flex: 0 0 120.71px;
+    margin: 0 35px 0 0;
+    overflow: hidden; }
+    .header__logo img {
+      width: 100%;
+      height: auto; }
+  .header__iconbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .header__icon {
+    margin: 0 10px 0 0; }
 
-  .icon-bi:before {
-    content: "\20";
-  }
-  .icon-face:before {
-    content: "\face";
-  }
-  .icon-cat:before {
-    content: "\ca";
-  }
-  .icon-p:before {
-    content: "\e903";
-  }*/
+.menu-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0; }
+.menu-header__link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #1f2431;
+  margin: 0 35px 0 0;
+  -webkit-transition: color .3s ease-in 0s;
+  transition: color .3s ease-in 0s; }
+  .menu-header__link:hover {
+    color: #315efb; }
 
 /*# sourceMappingURL=style.css.map */
