@@ -1,6 +1,54 @@
 @import url("../css/normalize_null.css");
 @font-face {
   font-family: 'Icon Font';
-  src: url("icomoon.woff") format("woff"), url("icomoon.svg") format("svg"), url("icomoon.eot") format("eot"), url("icomoon.ttf") format("ttf"); }
+  src: url("../font/icomoon.woff") format("woff"), url("../font/icomoon.svg") format("svg"), url("../font/icomoon.eot") format("eot"), url("../font/icomoon.ttf") format("ttf"); }
+* {
+  font-family: 'Montserrat', sans-serif; }
+
+button, a {
+  cursor: pointer; }
+
+html {
+  height: 100%;
+  scroll-behavior: smooth; }
+
+body {
+  height: 100%;
+  background: white; }
+
+.wrapper {
+  min-height: 100%;
+  max-width: 1440px;
+  min-width: 280px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.container {
+  max-width: 1150px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+.icon {
+  font-family: 'Icon Font';
+  color: black;
+  font-size: 30px; }
+
+/*
+.icon-tw:before {
+    content: "\e904";
+  }
+
+  .icon-bi:before {
+    content: "\20";
+  }
+  .icon-face:before {
+    content: "\face";
+  }
+  .icon-cat:before {
+    content: "\ca";
+  }
+  .icon-p:before {
+    content: "\e903";
+  }*/
 
 /*# sourceMappingURL=style.css.map */
