@@ -261,6 +261,8 @@ body {
   width: 80%;
   overflow: hidden;
   margin: 0 auto 50px auto; }
+  .section__pic:last-child {
+    margin: 0 auto; }
   .section__pic img {
     width: 100%;
     height: auto; }
@@ -310,6 +312,48 @@ body {
     position: absolute;
     top: 9px;
     left: 26px; }
+  .item__graphic_b:before {
+    background: linear-gradient(324.53deg, #315EFB -27.5%, rgba(49, 94, 251, 0) 108.52%); }
+  .item__graphic_p:before {
+    background: linear-gradient(273.54deg, #DADAFF -2.84%, rgba(238, 238, 255, 0) 122.55%); }
+  .item__graphic_nl:after {
+    display: none; }
+  .item__graphic_th:before, .item__graphic_th:after {
+    display: none; }
+  .item__graphic_th span, .item__graphic_th span:before, .item__graphic_th span:after {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(273.54deg, #DADAFF -2.84%, rgba(238, 238, 255, 0) 122.55%);
+    position: absolute; }
+  .item__graphic_th span {
+    top: 7.5px;
+    left: 0px; }
+    .item__graphic_th span:before {
+      content: '';
+      top: 0;
+      left: 8px; }
+    .item__graphic_th span:after {
+      content: '';
+      top: 0;
+      left: 16px; }
+  .item__graphic .tr {
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-right: 12.8px solid #eeeeff;
+    border-bottom: 3px solid transparent;
+    position: absolute;
+    top: 7px;
+    left: calc(50% - 6px); }
+  .item__graphic .ci {
+    width: 6.4px;
+    height: 6px;
+    background: #eeeeff;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: calc(50% + 4px); }
 .item__date {
   font-weight: 300;
   font-size: 10px;

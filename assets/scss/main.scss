@@ -270,6 +270,9 @@ body {
         width: 80%;
         overflow: hidden;
         margin: 0 auto 50px auto;
+        &:last-child {
+            margin: 0 auto;
+        }
         img {
             width: 100%;
             height: auto;
@@ -325,6 +328,66 @@ body {
             position: absolute;
             top: 9px;
             left: 26px;
+        }
+        &_b {
+            &:before {
+                background: linear-gradient(324.53deg, #315EFB -27.5%, rgba(49, 94, 251, 0) 108.52%);
+            }
+        }
+        &_p {
+            &:before {
+                background: linear-gradient(273.54deg, #DADAFF -2.84%, rgba(238, 238, 255, 0) 122.55%);
+            }
+        }
+        &_nl {
+            &:after {
+                display: none;
+            }
+        }
+        &_th {
+            &:before, &:after {
+                display: none;
+            }
+            span, span:before, span:after {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: linear-gradient(273.54deg, #DADAFF -2.84%, rgba(238, 238, 255, 0) 122.55%);
+                position: absolute;
+            }
+            span {
+                top: 7.5px;
+                left: 0px;
+                &:before {
+                    content: '';
+                    top: 0;
+                    left: 8px;
+                }
+                &:after {
+                    content: '';
+                    top: 0;
+                    left: 16px;
+                }
+            }
+        }
+        .tr {
+            width: 0; 
+            height: 0;
+            border-top: 3px solid transparent;
+            border-right: 12.8px solid rgba(238, 238, 255, 1);
+            border-bottom: 3px solid transparent;
+            position: absolute;
+            top: 7px;
+            left: calc(50% - 6px);
+        }
+        .ci {
+            width: 6.4px;
+            height: 6px;
+            background: rgba(238, 238, 255, 1);
+            border-radius: 50%;
+            position: absolute;
+            top: 7px;
+            left: calc(50% + 4px);
         }
     }
 
