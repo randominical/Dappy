@@ -50,9 +50,19 @@ body {
 	flex-direction: column;
 }
 .container {
-    max-width: 1200px;
-    padding: 0 20px;
     margin: 0 auto;
+    &_hf {
+        max-width: 100%;
+        padding: 0 4.3%;
+    }
+    &_t {
+        max-width: 100%;
+        padding: 0 8.3%;
+    }
+    &_m {
+        max-width: 1200px;
+        padding: 0 5.8%;
+    }
 }
 .icon {
     font-family: 'Icon Font';
@@ -87,13 +97,11 @@ body {
     top: 0;
     left: 0;
     z-index: 3;
-    .container {
+    .container_hf {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 100%;
-        padding: 0 4.3%;
     }
     &__left {
         display: flex;
@@ -146,13 +154,11 @@ body {
 .top {
     flex: 1 0 100%;
     padding: 140px 0 40px 0;
-    .container {
-        max-width: 100%;
+    .container_t {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 8.3%;
     }
     // .top__content
 
