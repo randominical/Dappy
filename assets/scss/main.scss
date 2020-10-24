@@ -86,7 +86,7 @@ body {
 
 @mixin adaptiv-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 280; //320 - наименьшее разрешение
+    $maxWidth: $maxWidth - 280;
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 280px) / #{$maxWidth}));
 }
 //==================================================================================
@@ -160,40 +160,33 @@ body {
         align-items: center;
         justify-content: space-between;
     }
-    // .top__content
-
     &__content {
         flex: 0 1 46.5%;
     }
-
-    // .top__title
-
     &__title {
-        @include adaptiv-font(36, 16); //в скобках размеры шрифта для крайних разрешений
+        @include adaptiv-font(36, 16);
         font-weight: bold;
         line-height: 130%;
         color: rgba(31, 36, 49, 1);
         margin: 0 0 22px 0;
     }
-
-    // .top__text
-
     &__text {
-        max-width: 251px;
+        @include adaptiv-font(17.5, 12);
+        line-height: 160%;
+        max-width: 60%;
         margin: 0 0 25px 0;
     }
-
-    // .top__link
-
     &__link {
-        height: 40px;
-        width: 215px;
-        display: flex;
+        height: calc((100vw - 280px) / 40 );
+        min-height: 40px;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
         font-weight: 500;
         font-size: 12px;
         line-height: 17px;
+        padding: 0 56px;
         text-transform: uppercase;
         color: rgba(255, 255, 255, 1);
         background: rgba(49, 94, 251, 1);
@@ -203,9 +196,6 @@ body {
             background: rgba(40,188,0,1);
         }
     }
-
-    // .top__pic
-
     &__pic {
         flex: 0 1 53.5%;
         overflow: hidden;
@@ -214,5 +204,83 @@ body {
             height: auto;
         }
     }
+    @media (min-width: $md1 + 10 + px) {
+        &__link {
+            @include adaptiv-font(20, 12);
+        }
+    }
 }
 //==================================================================================
+.section {
+
+    // .section__column
+
+    &__column {
+
+        // .section__column_1
+
+        &_1 {
+        }
+
+        // .section__column_2
+
+        &_2 {
+        }
+    }
+
+    // .section__item
+
+    &__item {
+    }
+
+    // .section__text
+
+    &__text {
+    }
+
+    // .section__lable
+
+    &__lable {
+    }
+
+    // .section__pic
+
+    &__pic {
+    }
+}
+.container {
+
+    // .container_m
+
+    &_m {
+    }
+}
+.text {
+}
+.item {
+
+    // .item__row
+
+    &__row {
+    }
+
+    // .item__column
+
+    &__column {
+    }
+
+    // .item__graphic
+
+    &__graphic {
+    }
+
+    // .item__date
+
+    &__date {
+    }
+
+    // .item__text
+
+    &__text {
+    }
+}
