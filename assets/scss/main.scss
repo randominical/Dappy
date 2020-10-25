@@ -15,6 +15,7 @@ $md4: 479.98;
 $maxWidth: 1440;
 
 * {
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 button, a {
@@ -166,12 +167,12 @@ body {
         &__icon {
             margin: 0 5px 0 0;
         }
-    }
-    .menu-header {
-        &__link {
-            font-size: 14px;
-            line-height: 18px;
-            margin: 0 5px 0 0;
+        .menu-header {
+            &__link {
+                font-size: 14px;
+                line-height: 18px;
+                margin: 0 5px 0 0;
+            }
         }
     }
     @media (max-width: $md4 + px) {
@@ -499,7 +500,6 @@ body {
         }
     }
 }
-
 //==================================================================================
 .footer {
     padding: 20px 0 117px 0;
@@ -508,6 +508,7 @@ body {
         justify-content: space-between;
     }
     &__column {
+        flex: 0 1 33.333%;
         margin: 0 20px 0 0;
     }
     &__lable {
@@ -524,11 +525,9 @@ body {
         color: rgba(130, 137, 155, 1);
         margin: 0 0 10px 0;
         transition: color .3s ease-in 0s;
-        &:hover {
-            color: rgba(49,94,251,1);
-        }
     }
     &__iconbar {
+        max-width: 200px;
         display: flex;
         justify-content: space-between;
         margin: 30px 0 0 0;
@@ -547,52 +546,106 @@ body {
             color: rgba(31, 36, 49, 1);
         }
     }
-}
-.form {
-    margin: 0 0 70px 0;     
-    &__lable {
-        margin: 0 0 22px 0;
-    }
-    &__row {
-        height: 39px;
-        width: 60%;
-        display: flex;
-    }
-    &__input {
-        flex: 0 1 70%;
-        height: 100%;
-        font-size: 14px;
-        line-height: 17px;
-        color: rgba(130, 137, 155, 1);
-        border: 1px solid rgba(130, 137, 155, 1);
-        box-sizing: border-box;
-        border-radius: 6px 0 0 6px;
-        margin: 0;
-        padding: 10px 14px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        outline: none;
-        &:focus {
-            box-shadow: 0 0 4px rgba(49, 94, 251, 1);
+    .form {
+        margin: 0 0 70px 0;     
+        &__lable {
+            margin: 0 0 22px 0;
+        }
+        &__row {
+            height: 39px;
+            width: 100%;
+            display: flex;
+        }
+        &__input {
+            flex: 0 1 70%;
+            height: 100%;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(130, 137, 155, 1);
+            border: 1px solid rgba(130, 137, 155, 1);
+            box-sizing: border-box;
+            border-radius: 6px 0 0 6px;
+            margin: 0;
+            padding: 10px 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            &:focus {
+                box-shadow: 0 0 4px rgba(49, 94, 251, 1);
+            }
+        }
+        &__button {
+            flex: 0 0 auto;
+            height: 100%;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(255, 255, 255, 1);
+            background: rgba(49, 94, 251, 1);
+            border-radius: 0 6px 6px 0;
+            margin: 0;
+            padding: 0 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background .3s ease-in 0s;
         }
     }
-    &__button {
-        flex: 1 1 30%;
-        height: 100%;
-        font-size: 14px;
-        line-height: 17px;
-        color: rgba(255, 255, 255, 1);
-        background: rgba(49, 94, 251, 1);
-        border-radius: 0 6px 6px 0;
-        margin: 0;
-        padding: 0 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background .3s ease-in 0s;
-        &:hover {
-            background: rgba(40,188,0,1);
+    @media (max-width: $md2 + px) {
+        padding: 20px 0 80px 0;
+        &__lable {
+            margin: 0 0 15px 0;
+        }
+        &__link {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__iconbar {
+            margin: 20px 0 0 0;
+        }
+    }
+    @media (min-width: $md3 + 1 + px) {
+        &__link {
+            &:hover {
+                color: rgba(49,94,251,1);
+            }
+        }
+        .form {
+            &__button {
+                &:hover {
+                    background: rgba(40,188,0,1);
+                }
+            }
+        }
+    }
+    @media (max-width: $md3 + px) {
+        padding: 20px 0 20px 0;
+        .container_hf {
+            flex-wrap: wrap;
+        }
+        &__column {
+            flex: 0 1 50%;
+            margin: 0 0 20px 0;
+            &:last-child {
+                flex: 0 1 100%;
+            }
+        }
+        .form {
+            margin: 0 0 55px 0;
+            width: 100%;     
+            &__lable {
+                margin: 0 0 10px 0;
+            }
+            &__row {
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: $md4 + px) {
+        .form {
+            &__input, &__button {
+                padding: 10px 5px;
+            }
         }
     }
 }
