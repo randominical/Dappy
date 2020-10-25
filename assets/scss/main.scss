@@ -30,8 +30,8 @@ body {
 }
 .wrapper {
     min-height: 100%;
-    max-width: $maxWidth;
-    min-width: 320px;
+    max-width: $maxWidth + px;
+    min-width: 280px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -50,7 +50,7 @@ body {
 	flex-direction: column;
 }
 .container {
-    min-width: 320px;
+    min-width: 280px;
     margin: 0 auto;
     &_hf {
         max-width: 100%;
@@ -360,6 +360,9 @@ body {
             display: flex;
             flex-direction: column;
             margin: 0 6px 0 0;
+            &:last-child {
+                margin: 0;
+            }
         }
         &__top {
             height: 45px;
@@ -495,6 +498,14 @@ body {
             flex: 0 0 auto;
             &_1 {
                 margin: 0 0 10px 0;
+            }
+        }
+    }
+    @media (max-width: 320px) {
+        .item {
+            &__p {
+                font-size: 10px;
+                line-height: 14px;
             }
         }
     }

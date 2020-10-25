@@ -4,8 +4,6 @@
   font-family: 'Icon Font';
   src: url("../font/icon_font/icomoon.woff") format("woff"), url("../font/icon_font/icomoon.svg") format("svg"), url("../font/icon_font/icomoon.eot") format("eot"), url("../font/icon_font/icomoon.ttf") format("ttf"); }
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   font-family: 'Montserrat', sans-serif; }
 
 button, a {
@@ -21,8 +19,8 @@ body {
 
 .wrapper {
   min-height: 100%;
-  max-width: 1440;
-  min-width: 320px;
+  max-width: 1440px;
+  min-width: 280px;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -51,7 +49,7 @@ body {
           flex-direction: column; }
 
 .container {
-  min-width: 320px;
+  min-width: 280px;
   margin: 0 auto; }
   .container_hf {
     max-width: 100%;
@@ -384,6 +382,8 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0 6px 0 0; }
+    .section .item__column:last-child {
+      margin: 0; }
   .section .item__top {
     height: 45px;
     margin: 0 0 10px 0; }
@@ -493,6 +493,10 @@ body {
                 flex: 0 0 auto; }
         .section__column_1 {
           margin: 0 0 10px 0; } }
+  @media (max-width: 320px) {
+    .section .item__p {
+      font-size: 10px;
+      line-height: 14px; } }
 
 .footer {
   padding: 20px 0 117px 0; }
