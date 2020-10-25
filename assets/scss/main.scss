@@ -50,6 +50,7 @@ body {
 	flex-direction: column;
 }
 .container {
+    min-width: 280px;
     margin: 0 auto;
     &_hf {
         max-width: 100%;
@@ -69,8 +70,10 @@ body {
     color: rgba(31,36,49,1);
     font-size: 24px;
     transition: color .3s ease-in 0s;
-    &:hover {
-        color: rgba(49,94,251,1);
+    @media (min-width: $md3 + 1 + px) {
+        &:hover {
+            color: rgba(49,94,251,1);
+        }
     }
 }
 .text {
@@ -116,12 +119,6 @@ body {
             height: auto;
         }
     }
-    &__menu {
-    }
-    &__burger {
-    }
-    &__right {
-    }
     &__iconbar {
         display: flex;
         align-items: center;
@@ -132,8 +129,6 @@ body {
     }
 }
 .menu-header {
-    &__body {
-    }
     &__list {
         display: flex;
         align-items: center;
@@ -145,8 +140,66 @@ body {
         color: rgba(31, 36, 49, 1);
         margin: 0 35px 0 0;
         transition: color .3s ease-in 0s;
-        &:hover {
-            color: rgba(49,94,251,1);
+    }
+}
+@media (max-width: $md2 + px) {
+    .header {
+        height: 80px;
+    }
+}
+@media (min-width: $md3 + 1 + px) {
+    .menu-header {
+        &__link {
+            &:hover {
+                color: rgba(49,94,251,1);
+            }
+        }
+    }
+}
+@media (max-width: $md3 + px) {
+    .header {
+        height: 60px;
+        &__logo {
+            flex: 0 0 50px;
+            margin: 5px 10px 0 0;
+        }
+        &__icon {
+            margin: 0 5px 0 0;
+        }
+    }
+    .menu-header {
+        &__link {
+            font-size: 14px;
+            line-height: 18px;
+            margin: 0 5px 0 0;
+        }
+    }
+}
+@media (max-width: $md4 + px) {
+    .header {
+        .container_hf {
+            flex-direction: column;
+        }
+        &__left {
+            width: 100%;
+            justify-content: space-between;
+            margin: 0 0 5px 0;
+        }
+        &__right {
+            width: 100%;
+        }
+        .menu-header {
+            width: calc(100% - 60px);
+            max-width: 250px;
+            &__list {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+        &__iconbar {
+            max-width: 300px;
+            justify-content: space-around;
+            margin: 0 auto;
         }
     }
 }
