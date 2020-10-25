@@ -524,7 +524,6 @@ body {
         line-height: 20px;
         color: rgba(130, 137, 155, 1);
         margin: 0 0 10px 0;
-        transition: color .3s ease-in 0s;
     }
     &__iconbar {
         max-width: 200px;
@@ -542,7 +541,7 @@ body {
         font-size: 12px;
         line-height: 15px;
         color: rgba(130, 137, 155, 1);
-        span {
+        span, .link-copyright {
             color: rgba(31, 36, 49, 1);
         }
     }
@@ -605,8 +604,9 @@ body {
         }
     }
     @media (min-width: $md3 + 1 + px) {
-        &__link {
+        &__link, .link-copyright {
             &:hover {
+                transition: color .3s ease-in 0s;
                 color: rgba(49,94,251,1);
             }
         }
