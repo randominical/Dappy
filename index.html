@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dappy</title>
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header wow fadeInDown" data-wow-delay=".7s">
             <div class="container container_hf">
                 <div class="header__left">
                     <div class="header__logo">
@@ -36,7 +37,7 @@
         </header>
         <main class="page">
             <div class="top">
-                <div class="container container_t">
+                <div class="container container_t wow fadeIn" data-wow-delay=".2s">
                     <div class="top__content">
                         <h1 class="top__title">Create your first<br>
                             decentralized wallet</h1>
@@ -52,10 +53,10 @@
                 <section id="section" class="section">
                     <div class="container container_m">
                         <div class="section__column section__column_1">
-                            <div class="section__item">
+                            <div class="section__item wow fadeInUp" data-wow-delay=".7s">
                                 <p class="section__text text">Dappy is light wallet powered by Blockstack. It uses Gaia decentralized storage and encryption option. Dappy doesn't store or proceed user private key, the all data are securely stored in the Gaia. Dappy was created by the BC Net that trust in crypto and decentralized applications.</p>
                             </div>
-                            <div class="section__item">
+                            <div class="section__item wow fadeInUp" data-wow-delay=".7s">
                                 <h2 class="section__lable">Free and open source</h2>
                                 <div class="section__pic">
                                     <img src="assets/img/section_1.svg" alt="">
@@ -63,7 +64,7 @@
                                 <p class="section__text text">Fully open and transparent wallet. Our code is
                                     <span>open source</span> and trusted by Blockstack Team.</p>
                             </div>
-                            <div class="section__item item">
+                            <div class="section__item item wow fadeInUp" data-wow-delay=".7s">
                                 <h2 class="section__lable">Roadmap</h2>
                                 <div class="item__row">
                                     <div class="item__column">
@@ -191,21 +192,21 @@
                             </div>
                         </div>
                         <div class="section__column section__column_2">
-                            <div class="section__item">
+                            <div class="section__item wow fadeInUp" data-wow-delay=".7s">
                                 <h2 class="section__lable">Multi-currencies</h2>
                                 <div class="section__pic">
                                     <img src="assets/img/section_2.svg" alt="">
                                 </div>
                                 <p class="section__text text">Receive, send and store the most popular coins, like Bitcoin, Ethereum, Litecoin, Dash and lots more.</p>
                             </div>
-                            <div class="section__item">
+                            <div class="section__item wow fadeInUp" data-wow-delay=".7s">
                                 <h2 class="section__lable">Tokens</h2>
                                 <div class="section__pic">
                                     <img src="assets/img/section_3.svg" alt="">
                                 </div>
                                 <p class="section__text text">Full support for any tokens on Ethereum network. Bitcoin tokens (Omnilayer) is coming soon.</p>
                             </div>
-                            <div class="section__item">
+                            <div class="section__item wow fadeInUp" data-wow-delay=".7s">
                                 <h2 class="section__lable">Exchange</h2>
                                 <p class="section__text text">In-app exchange is supported by ShapeShift, it allows to convert coins to each other in the most intuitive and easiest way.</p>
                                 <div class="section__pic">
@@ -216,7 +217,7 @@
                     </div>
                 </section>
             </div>
-            <footer class="footer">
+            <footer class="footer wow fadeIn" data-wow-delay=".9s">
                 <div class="container container_hf">
                     <div class="footer__column">
                         <h3 class="footer__lable">About</h3>
@@ -253,5 +254,7 @@
             </footer>
         </main>
     </div>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
